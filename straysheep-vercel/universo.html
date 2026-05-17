@@ -39,11 +39,12 @@ canvas#universe {
 .gate {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 55% 45%;
   align-items: center;
-  padding: 4rem 5vw;
-  gap: 2rem;
+  padding: 4rem 0 4rem 5vw;
+  gap: 0;
   position: relative;
+  overflow: hidden;
 }
 
 .gate::after {
@@ -216,8 +217,8 @@ canvas#universe {
   z-index: 2;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
-  overflow: visible;
+  align-items: center;
+  overflow: hidden;
   opacity: 0;
   animation: fadeUp 0.9s ease 0.4s forwards;
 }
@@ -226,7 +227,7 @@ canvas#universe {
   position: relative;
   width: 100%;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-end;
 }
 
@@ -246,12 +247,11 @@ canvas#universe {
 
 .gate-img {
   width: 100%;
-  max-width: 700px;
   height: auto;
   display: block;
   filter: drop-shadow(-15px 0 40px rgba(227,54,195,0.5));
   animation: float 7s ease-in-out infinite;
-  transform-origin: bottom right;
+  transform-origin: center center;
 }
 
 @keyframes float {
@@ -325,7 +325,7 @@ canvas#universe {
       </div>
 
       <div class="gate-btn-wrap">
-        <a href="https://reto.magiaparaatrevidos.com" class="btn-dare">
+        <a href="https://reto.magiaparaatrevidos.com" class="btn-dare" target="_top">
           <span class="btn-dare-text">Me atrevo →</span>
         </a>
         <a href="index.html" class="btn-back">← Volver a Stray</a>
